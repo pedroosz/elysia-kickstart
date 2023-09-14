@@ -1,0 +1,23 @@
+{
+  "name": "elysia-kickstart",
+  "version": "1.0.50",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "migrate": "drizzle-kit generate:pg --schema ./src/database/drizzle/schema.ts && bun run ./src/database/drizzle/migrate.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cookie": "^0.6.1",
+    "@elysiajs/jwt": "^0.6.4",
+    "@elysiajs/swagger": "^0.6.2",
+    "drizzle-orm": "^0.28.6",
+    "elysia": "latest",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.10.2",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.19.13",
+    "prisma": "^5.2.0"
+  },
+  "module": "src/index.js"
+}
